@@ -17,4 +17,9 @@ jobs:
     steps:
       - run: echo "Name:" ${{ github.event_name }} 
       - run: echo "Branch:" ${{ github.ref }} 
-      - run: echo "Files:" ${{ github.workspace }}
+      - uses: actions/checkout@v3.3.0
+
+      - name: List files in the repository
+        run: |
+          echo "Files:"
+          tree
