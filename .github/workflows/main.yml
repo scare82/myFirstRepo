@@ -17,4 +17,4 @@ jobs:
     steps:
       - run: echo "Name:" ${{ github.event_name }} 
       - run: echo "Branch:" ${{ github.ref }} 
-      - run: ls ${{ github.workspace }}
+      - run: ls ${{ github.workspace }} | echo
